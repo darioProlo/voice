@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">NorthwayVoiceSDK</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="edit_message">Enter text here</string>
+    <string name="button_text">Synthesise</string>
+    <string name="inf_ceng">Creating engine</string>
+    <string name="inf_lvoice">Loading voice file</string>
+    <string name="inf_ochannel">Opening channel</string>
+    <string name="inf_ready">Ready for synthesis</string>
+    <string name="inf_synth">Synthesised:</string>
+    <string name="err_no_voice">Could not find voice file</string>
+    <string name="err_no_license">Could not find license file</string>
+    <string name="err_no_root_ca_certificate">Could not find root license server certificate file</string>
+    <string name="err_no_client_certificate">Could not find client certificate file</string>
+    <string name="err_no_client_key">Could not find client key file</string>
+    <string name="err_read_voice">Could not read voice file</string>
+    <string name="err_read_license">Could not read license file</string>
+    <string name="err_read_root_ca_certificate">Could not read root license server certificate file</string>
+    <string name="err_read_client_certificate">Could not read client certificate file</string>
+    <string name="err_read_client_key">Could not read client key file</string>
+    <string name="err_read_perm">App does not have read permission</string>
+    <string name="err_load">Engine could not load voice</string>
+    <string name="err_chan">Cannot open channel</string>
+    <string name="err_synth">Synthesis failed</string>
+
+</resources>

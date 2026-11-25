@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item android:drawable="@drawable/sound_circle"/>-->
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="25dp"
+                android:height="25dp" />
+            <solid android:color="@color/spsk_colorBrand" />
+        </shape>
+    </item>
+    <item>
+        <inset
+            android:drawable="@drawable/sound_on"
+            android:insetLeft="9dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp" />
+    </item>
+
+</layer-list>

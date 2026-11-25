@@ -1,0 +1,65 @@
+package io.spokestack.tray
+
+import com.example.northway_wake_word.tray.Prompt
+import io.spokestack.spokestack.dialogue.DialogueEvent
+import io.spokestack.spokestack.nlu.NLUResult
+import io.spokestack.spokestack.util.EventTracer
+
+/**
+ * An interface for classes that wish to receive events from the Spokestack tray.
+ *
+ * For trace messages, the tray dispatches those that meet or exceed the logging level specified
+ * in tray configuration. Errors are dispatched via `onError`.
+ *
+ * All methods have a default implementation, so adopters can choose those relevant to their
+ * use case.
+ *
+ * @see TrayConfig
+ * @see EventTracer.Level
+ */
+interface SpokestackTrayListener {
+
+    /**
+     * A log message was received from Spokestack.
+     *
+     * @param message The log message.
+     */
+    fun onLog(message: String) {}
+
+    /**
+     * Spokestack's NLU classified an utterance.
+     *
+     * @param result The classification result.
+     * @return A prompt representing the application's response to the user utterance.
+     */
+    fun onClassification(result: NLUResult): Prompt? {
+        return null
+    }
+
+    /**
+     * Spokestack's dialogue manager emitted an event.
+     *
+     * @param event The dialogue event.
+     * @return A prompt representing the application's response to the user utterance.
+     */
+    fun onDialogueEvent(event: DialogueEvent): Prompt? {
+        return null
+    }
+
+    /**
+     * Spokestack encountered an error.
+     *
+     * @param error The error.
+     */
+    fun onError(error: Throwable) {}
+
+    /**
+     * The tray UI opened. Called from the UI thread.
+     */
+    fun onOpen() {}
+
+    /**
+     * The tray UI closed. Called from the UI thread.
+     */
+    fun onClose() {}
+}
